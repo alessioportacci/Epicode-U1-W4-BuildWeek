@@ -9,38 +9,50 @@
     <link rel="stylesheet" href="assets/CSS/welcome.css" />
   </head>
   <body>
-    <header id="logo"></header>
-    <!--immagine -->
-    <main>
-      <section>
-        <h1 id="welcome">WELCOME TO <span> YOUR EXAM</span></h1>
-      </section>
-      <section>
-        <h3>Instructions</h3>
-        <p>
-          We dont'n expect most engineers to know the answers to all of these
-          questions, so dont't worry if you're unsure of a few of them.
-        </p>
+    <div class="container">
+      <header id="logo">
+        <img
+          id="logo-header"
+          src="assets/images/epicode_logo.png"
+          alt="epicode logo"
+        />
+      </header>
 
-        <ul>
-          <li>Each question is timed and can only be answered once.</li>
-          <li>
-            Changing browser tab or opening other windows will invalidate the
-            question.
-          </li>
-          <li>This exam will take approx. 0-5 minutes.</li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <form id="form-proceed" action="">
-        <input required id="check" type="checkbox" />
-        <label for="check"
-          >I promise to answer myself without help from anyone</label
-        >
-        <button id="proceed" type="submit">PROCEED</button>
-      </form>
-    </footer>
-    <script src="scripts/welcome.js"></script>
+      <main>
+        <section class="section-main">
+          <h1 id="welcome">Welcome to <br /><span>your exam</span></h1>
+        </section>
+        <section>
+          <h3 id="color-h3-text">Instructions</h3>
+          <p>
+            We dont'n expect most engineers to know the answers to all of
+            these<br />
+            questions, so dont't worry if you're unsure of a few of them.
+          </p>
+
+          <ul>
+            <li>
+              Each question is <span>timed</span> and can only be
+              <span>answered once.</span>
+            </li>
+            <li>
+              Changing browser tab or opening other windows will
+              <span>invalidate the question.</span>
+            </li>
+            <li>This exam will take approx. <span>0-5 minutes.</span></li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <form id="form-proceed" action="">
+          <input required id="check" type="checkbox" />
+          <label for="check"
+            >I promise to answer myself without help from anyone</label
+          >
+          <button id="proceed" type="submit">PROCEED</button>
+        </form>
+      </footer>
+      <script src="scripts/welcome.js"></script>
+    </div>
   </body>
 </html>
