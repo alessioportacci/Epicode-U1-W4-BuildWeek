@@ -4,7 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Epicode</title>
+    <link rel="stylesheet" href="assets/CSS/reset.css" />
+    <link rel="stylesheet" href="assets/CSS/welcome.css" />
   </head>
-  <body></body>
+  <body>
+    <header id="logo"></header>
+    <!--immagine -->
+    <main>
+      <section>
+        <h1 id="welcome">WELCOME TO <span> YOUR EXAM</span></h1>
+      </section>
+      <section>
+        <h3>Instructions</h3>
+        <p>
+          We dont'n expect most engineers to know the answers to all of these
+          questions, so dont't worry if you're unsure of a few of them.
+        </p>
+
+        <ul>
+          <li>Each question is timed and can only be answered once.</li>
+          <li>
+            Changing browser tab or opening other windows will invalidate the
+            question.
+          </li>
+          <li>This exam will take approx. 0-5 minutes.</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <form id="form-proceed" action="">
+        <input id="check" type="checkbox" />
+        <label for="check"
+          >I promise to answer myself without help from anyone</label
+        >
+        <button id="proceed" type="submit">PROCEED</button>
+      </form>
+    </footer>
+  </body>
 </html>
