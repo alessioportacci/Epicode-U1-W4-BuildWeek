@@ -45,37 +45,38 @@ body {
     
 }
 
+.box-answer {
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .answer1 {
     width: 250px;
-    border: 1px solid white;
     height: 70px;
-     border-width: 2px 4px;
-    border-radius: 40px;
+   
     display: inline-block;
-    margin: 10px;
-    margin-left: 60px;
+    margin-top: 10%;
+    margin-top: 40%;
+    border-width: 2px 4px;
+    border-radius: 40px;
+    border-top: 3px solid white;
+border-radius: 40px 40px 40px 40px;
+border-bottom: 2px solid white;
+border-radius: 40px 40px 40px 40px;
+
 }
 
 .answer2 {
     width: 250px;
-    border: 1px solid white;
     height: 70px;
-     border-width: 2px 4px;
-    border-radius: 40px;
     display: inline-block;
-    margin: 10px;
-    margin-left: 60px;
-  
-}
-
-#box-answer {
-    padding: auto;
-    margin: auto;
-    width: 15em;
-}
-
-main {
-    margin: auto;
-    display: flex;
-    padding: auto;
+    margin-top: 5%;
+    border-width: 2px 4px;
+    border-radius: 40px;
+    border-top: 3px solid white;
+    border-radius: 40px 40px 40px 40px;
+    border-bottom: 2px solid white;
+    border-radius: 40px 40px 40px 40px;
 }
