@@ -6,4 +6,5 @@ button.addEventListener("click", function(e){
     e.preventDefault()
     if (check.checked) {
         window.location.href = "/test.html" 
-    } else {
+    } 
+})
