@@ -5,10 +5,10 @@ console.log(answersRecap)
 const totalAnswer = answersRecap[0] + answersRecap [1]
 const correctPercentage = (answersRecap[0]*100) / totalAnswer
 const wrongPercentage = (answersRecap[1]*100) / totalAnswer
-document.getElementById('correct-percentage').innerHTML = correctPercentage + '% '
+document.getElementById('correct-percentage').innerHTML = correctPercentage.toFixed(1) + '% '
 document.getElementById('correct-number').innerHTML = answersRecap[0] + '/' + totalAnswer
 
-document.getElementById('wrong-percentage').innerHTML = wrongPercentage + '% '
+document.getElementById('wrong-percentage').innerHTML = wrongPercentage.toFixed(1) + '% '
 document.getElementById('wrong-number').innerHTML = answersRecap[1] + '/' + totalAnswer
 
 let messageResultExam = document.getElementById('final-results')
