@@ -94,6 +94,8 @@ const questions = [
   },
 ]
 
+let answersRecap= [0, 0]
+
 const pushAnswers = function (question) 
 {
   //Se è a risposta multipla
@@ -193,13 +195,18 @@ answerBoxes.forEach(function(box)
     {
         //Mi prendo 
         questionAnswers.push(box.getAttribute("value"))
-        console.log(questionAnswers)
-        if(box.getAttribute("value") == "true")
+        document.getElementById("question-number").innerHTML = questionAnswers.length +1 + "/" + questions.length
+        console.log("Answers recap" + answersRecap)
+        if(box.getAttribute("value") == "true") {
             alert("Bravissimo")
-        else
-            alert("Sei una merdaccia")
+            answersRecap[0] ++
+          }
+        else{}
+            alert("Poteva andà peggio")
+            answersRecap[1] ++
         pushQuestion()
     })
 })
-
+document.getElementById("question-number").innerHTML = 1 + "/" + questions.length
 pushQuestion()
+
