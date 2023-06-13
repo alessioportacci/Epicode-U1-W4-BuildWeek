@@ -53,10 +53,13 @@ p {
 
 .star-off {
     display: inline-block;
-    color: #00FFFF;
     font-size: 3em;
     margin-top: 10px;
     padding: 5px;
+}
+
+.star-on {
+    color: #00FFFF;
 }
 
 #comment {
@@ -88,3 +91,4 @@ hr {
     box-shadow:3px -3px 50px 9px rgba(0,255,255,0.75);
     font-weight: bold;
 }
+
