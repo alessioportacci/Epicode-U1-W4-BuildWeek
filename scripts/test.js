@@ -94,7 +94,10 @@ const questions = [
   },
 ]
 
-let answersRecap= [0, 0]
+let answersRecap = [0, 0]
+const questionIndex = []
+const questionAnswers = []
+let index 
 
 const pushAnswers = function (question) 
 {
@@ -103,24 +106,20 @@ const pushAnswers = function (question)
   {
     const trueIndex = Math.floor(Math.random() * 4 + 1)
     let i = 0
-    let truePassed = false
+    let truePassed = 0
     while (i < 4) 
     {
-      if (i === trueIndex) 
+      const answerBox = document.getElementById("ans" + i)
+      if (i === trueIndex)
       {
-            const answerBox = document.getElementById("ans" + i)
-            answerBox.innerHTML = question.correct_answer
-            answerBox.setAttribute("value", "true")
-            truePassed = true
+        answerBox.innerHTML = question.correct_answer
+        answerBox.setAttribute("value", "true")
+        truePassed = 1
       }
       else 
       {
-            const answerBox = document.getElementById("ans" + i)
-            answerBox.setAttribute("value", "false")
-            if (truePassed) 
-                answerBox.innerHTML = question.incorrect_answers[i - 1]
-            else 
-                answerBox.innerHTML = question.incorrect_answers[i]
+        answerBox.setAttribute("value", "false")
+        answerBox.innerHTML = question.incorrect_answers[i - truePassed]
       }
       i++
     }
@@ -128,33 +127,36 @@ const pushAnswers = function (question)
   //Se è a risposta booleana
   else 
   {
-        const trueIndex = Math.floor(Math.random() * 2 + 1)
+    const trueIndex = Math.floor(Math.random() * 2 + 1)
 
-        let trueBox = document.getElementById("ans0")
-        let falseBox = document.getElementById("ans1")
+    let trueBox = document.getElementById("ans0")
+    let falseBox = document.getElementById("ans1")
 
-        if (trueIndex == 2)
-        {
-            trueBox = document.getElementById("ans1")
-            falseBox = document.getElementById("ans0")
-        }
+    if (trueIndex == 2)
+    {
+      trueBox = document.getElementById("ans1")
+      falseBox = document.getElementById("ans0")
+    }
 
-        trueBox.innerHTML = question.correct_answer
-        falseBox.innerHTML = question.incorrect_answers[0]
+    trueBox.innerHTML = question.correct_answer
+    falseBox.innerHTML = question.incorrect_answers[0]
   }
 }
-
-const questionIndex = []
-const questionAnswers = []
-let index 
 
 const pushQuestion = function () 
 {
   //Prendo un index randomico
   index = Math.floor(Math.random() * 10)
-  if (questionIndex.includes(index))
-    //Se è già uscito, vai di ricorsività
+  //Se sono finite le domande
+  if(questionIndex.length === questions.length)
+  {
+    sessionStorage.setItem('answersRecap', answersRecap);
+    window.location.href = "results.html"
+  }
+  //Se il numero è già uscito, vai di ricorsività
+  else if (questionIndex.includes(index))
     pushQuestion()
+  //Se possiamo prenderci un'altra domanda
   else 
   {
     //Pusho l'index e carico la domanda
@@ -163,7 +165,7 @@ const pushQuestion = function ()
     document.getElementById("questions").innerHTML = question.question
     //Pusho le domande
     pushAnswers(question)
-    intervallo(10)
+    intervallo(40)
   }
 }
 
@@ -201,14 +203,14 @@ answerBoxes.forEach(function(box)
         //Se la risposta è giusta
         if(box.getAttribute("value") == "true") 
         {
-            alert("Bravissimo")
-            answersRecap[0] ++
+          alert("Bravissimo")
+          answersRecap[0] ++
         }
         //Se la risposta è sbagliata
         else
         {
-            alert("Poteva andà peggio")
-            answersRecap[1] ++
+          alert("Poteva andà peggio")
+          answersRecap[1] ++
         }
         pushQuestion()
     })
