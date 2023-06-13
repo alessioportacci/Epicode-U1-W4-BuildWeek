@@ -193,17 +193,23 @@ answerBoxes.forEach(function(box)
 {
     box.addEventListener("click", function()
     {
-        //Mi prendo 
+        //Mi prendo il valore della risposta
         questionAnswers.push(box.getAttribute("value"))
+        //Aggiorno il box
         document.getElementById("question-number").innerHTML = questionAnswers.length +1 + "/" + questions.length
         console.log("Answers recap" + answersRecap)
-        if(box.getAttribute("value") == "true") {
+        //Se la risposta è giusta
+        if(box.getAttribute("value") == "true") 
+        {
             alert("Bravissimo")
             answersRecap[0] ++
-          }
-        else{}
+        }
+        //Se la risposta è sbagliata
+        else
+        {
             alert("Poteva andà peggio")
             answersRecap[1] ++
+        }
         pushQuestion()
     })
 })
