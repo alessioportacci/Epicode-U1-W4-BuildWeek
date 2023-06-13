@@ -47,7 +47,6 @@ p {
  }
 
  #correct {
-    
     width: 200px;
     height: 200px;
     display: inline-block;
@@ -60,7 +59,6 @@ p {
  }
 
  #wrong {
-   
    width: 200px;
    height: 200px;
    position: absolute;
@@ -69,17 +67,17 @@ p {
   top: 40%;
   margin-right: 30px;
    color: white;
-   
 
-   
+
+
  }
 
  #graphic {
     width: 250px;
     height: 250px;
    border-radius: 100%;
-   border:40px solid #00FFFF;
-   translate: 800px;
+   border: 40px solid #00FFFF;
+   translate: 570px;
    margin-top: 2%;
 
  }
@@ -93,7 +91,6 @@ translate: 35px;
  .question-correct {
     margin-top: 35%;
     translate: 20%;
-    
  }
 
  #button-rate-us {
