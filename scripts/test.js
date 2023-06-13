@@ -1,6 +1,3 @@
-const questionIndex = []
-const questionAnswers = []
-
 const questions = [
   {
     category: "Science: Computers",
@@ -97,53 +94,67 @@ const questions = [
   },
 ]
 
-const pushAnswers = function (question) {
+const pushAnswers = function (question) 
+{
   //Se è a risposta multipla
-  if (question.type === "multiple") {
+  if (question.type === "multiple") 
+  {
     const trueIndex = Math.floor(Math.random() * 4 + 1)
     let i = 0
     let truePassed = false
-    while (i < 4) {
-      if (i === trueIndex) {
-        const answerBox = document.getElementById("ans" + i)
-        answerBox.innerHTML = question.correct_answer
-        answerBox.setAttribute("value", "true")
-        truePassed = true
-      } else {
-        const answerBox = document.getElementById("ans" + i)
-        answerBox.setAttribute("value", "false")
-        if (truePassed) answerBox.innerHTML = question.incorrect_answers[i - 1]
-        else answerBox.innerHTML = question.incorrect_answers[i]
+    while (i < 4) 
+    {
+      if (i === trueIndex) 
+      {
+            const answerBox = document.getElementById("ans" + i)
+            answerBox.innerHTML = question.correct_answer
+            answerBox.setAttribute("value", "true")
+            truePassed = true
+      }
+      else 
+      {
+            const answerBox = document.getElementById("ans" + i)
+            answerBox.setAttribute("value", "false")
+            if (truePassed) 
+                answerBox.innerHTML = question.incorrect_answers[i - 1]
+            else 
+                answerBox.innerHTML = question.incorrect_answers[i]
       }
       i++
     }
   }
   //Se è a risposta booleana
-  else {
-    const trueIndex = Math.floor(Math.random() * 2 + 1)
-    if (trueIndex === 1) {
-      document.getElementById("ans0").setAttribute("value", "true")
-      document.getElementById("ans0").innerHTML = question.correct_answer
+  else 
+  {
+        const trueIndex = Math.floor(Math.random() * 2 + 1)
 
-      document.getElementById("ans1").setAttribute("value", "false")
-      document.getElementById("ans1").innerHTML = question.incorrect_answers[0]
-    } else {
-      document.getElementById("ans0").setAttribute("value", "false")
-      document.getElementById("ans0").innerHTML = question.incorrect_answers[0]
+        let trueBox = document.getElementById("ans0")
+        let falseBox = document.getElementById("ans1")
 
-      document.getElementById("ans1").setAttribute("value", "true")
-      document.getElementById("ans1").innerHTML = question.correct_answer
-    }
+        if (trueIndex == 2)
+        {
+            trueBox = document.getElementById("ans1")
+            falseBox = document.getElementById("ans0")
+        }
+
+        trueBox.innerHTML = question.correct_answer
+        falseBox.innerHTML = question.incorrect_answers[0]
   }
 }
 
-const pushQuestion = function () {
+const questionIndex = []
+const questionAnswers = []
+let index 
+
+const pushQuestion = function () 
+{
   //Prendo un index randomico
-  const index = Math.floor(Math.random() * 10)
+  index = Math.floor(Math.random() * 10)
   if (questionIndex.includes(index))
     //Se è già uscito, vai di ricorsività
     pushQuestion()
-  else {
+  else 
+  {
     //Pusho l'index e carico la domanda
     questionIndex.push(index)
     const question = questions[index]
@@ -154,22 +165,41 @@ const pushQuestion = function () {
   }
 }
 
-pushQuestion()
-
 const timerHTML = document.getElementById("timer-seconds")
-function intervallo(timer) {
+function intervallo(timer) 
+{
   //SetInterval ripete delle istruzione ogni tot secondi va dichiarato come variabile per fare clearInterval
-  const interval = setInterval(function () {
-    console.log(timer)
+  const interval = setInterval(function () 
+  {
     //Diminuisco il timer ogni secondo
     timerHTML.innerHTML = timer
     timer -= 1
     //Se il timer finisce, pulisco l'intervallo
-    if (timer < 0) {
+    if (timer < 0) 
+    {
       clearInterval(interval)
       timerHTML.innerHTML = "TEMPO SCADUTO"
-
       pushQuestion()
     }
   }, 1000)
 }
+
+//Mi prendo tutti i box delle risposte 
+const answerBoxes = document.querySelectorAll(".answer")
+//Ad ogni box aggiungo un evento di click
+answerBoxes.forEach(function(box)
+{
+    box.addEventListener("click", function()
+    {
+        //Mi prendo 
+        questionAnswers.push(box.getAttribute("value"))
+        console.log(questionAnswers)
+        if(box.getAttribute("value") == "true")
+            alert("Bravissimo")
+        else
+            alert("Sei una merdaccia")
+        pushQuestion()
+    })
+})
+
+pushQuestion()
