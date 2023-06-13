@@ -22,6 +22,8 @@ body {
 
 .logo {
     width: 150px;
+    margin-top: 4%;
+    margin-left: 70px;;
 }
 
 #container-timer {
@@ -53,30 +55,39 @@ body {
 }
 
 .answer1 {
-    width: 250px;
+    width: 260px;
     height: 70px;
-   
     display: inline-block;
     margin-top: 10%;
     margin-top: 40%;
+    margin-left: 6%;
     border-width: 2px 4px;
     border-radius: 40px;
     border-top: 3px solid white;
 border-radius: 40px 40px 40px 40px;
 border-bottom: 2px solid white;
 border-radius: 40px 40px 40px 40px;
-
+background-color: rgb(57, 56, 78);
+opacity: 0.5;
 }
 
 .answer2 {
-    width: 250px;
+    width: 260px;
     height: 70px;
     display: inline-block;
     margin-top: 5%;
+    margin-left: 6%;
     border-width: 2px 4px;
     border-radius: 40px;
     border-top: 3px solid white;
     border-radius: 40px 40px 40px 40px;
     border-bottom: 2px solid white;
     border-radius: 40px 40px 40px 40px;
+    background-color: rgb(57, 56, 78);
+opacity: 0.5;
+}
+
+#question {
+    text-align: center;
+    font-weight: bold;
 }
