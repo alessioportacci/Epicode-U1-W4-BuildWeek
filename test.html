@@ -9,30 +9,33 @@
     <link rel="stylesheet" href="assets/CSS/test.css" />
   </head>
   <body>
-    <header id="logo">
-      <div id="container-timer">
-        <div id="timer">
-          <p>SECONDS</p>
-          <h4 id="timer-seconds"></h4>
-          <p>REMENING</p>
+    <div class="container">
+      <header id="logo">
+        <img class="logo" src="assets/images/epicode_logo.png" alt="Logo" />
+        <div id="container-timer">
+          <div id="timer">
+            <p class="text-timer">SECONDS</p>
+            <h4 id="timer-seconds"></h4>
+            <p class="text-timer">REMENING</p>
+          </div>
         </div>
-      </div>
-    </header>
-    <main>
-      <section>
-        <h1 id="questions"></h1>
-      </section>
-      <section>
-        <div class="answer"></div>
-        <div class="answer"></div>
-        <div class="answer"></div>
-        <div class="answer"></div>
-      </section>
-    </main>
-    <footer>
-      <p>QUESTION <span id="question-number"></span></p>
-    </footer>
-    <!--immagine -->
+      </header>
+      <main>
+        <section>
+          <h1 id="questions"></h1>
+        </section>
+        <section id="box-answer">
+          <div class="answer1"></div>
+          <div class="answer1"></div>
+          <br />
+          <div class="answer2"></div>
+          <div class="answer2"></div>
+        </section>
+      </main>
+      <footer>
+        <p>QUESTION <span id="question-number"></span></p>
+      </footer>
+    </div>
     <script src="scripts/test.js"></script>
   </body>
 </html>
