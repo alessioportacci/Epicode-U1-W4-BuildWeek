@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
 body {
     background-image: url(../images/bg.jpg);
     background-size: cover;
@@ -24,7 +24,6 @@ body {
     width: 150px;
 }
 
-
 #container-timer {
     width: 100px;
     height: 100px;
@@ -43,38 +42,40 @@ body {
     margin:20px;
     font-size: 0.6em;
     padding: 10px;
-}
-
-.box-answer {
-    width: 600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 .answer1 {
     width: 250px;
-    height: 70px;
     border: 1px solid white;
-    display: inline-block;
-    margin-top: 10%;
-    margin-top: 40%;
-    border-width: 2px 4px;
+    height: 70px;
+     border-width: 2px 4px;
     border-radius: 40px;
-    background-color: black;
-    opacity: 2;
+    display: inline-block;
+    margin: 10px;
+    margin-left: 60px;
 }
 
 .answer2 {
     width: 250px;
-    height: 70px;
     border: 1px solid white;
-    display: inline-block;
-    margin-top: 5%;
-    border-width: 2px 4px;
+    height: 70px;
+     border-width: 2px 4px;
     border-radius: 40px;
-    border-top: 3px solid white;
-    border-radius: 40px 40px 40px 40px;
-    border-bottom: 2px solid white;
-    border-radius: 40px 40px 40px 40px;
+    display: inline-block;
+    margin: 10px;
+    margin-left: 60px;
+  
+}
+
+#box-answer {
+    padding: auto;
+    margin: auto;
+    width: 15em;
+}
+
+main {
+    margin: auto;
+    display: flex;
+    padding: auto;
 }
