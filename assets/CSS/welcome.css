@@ -2,18 +2,25 @@
 body {
     background-image: url(../images/bg.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: 'Outfit', sans-serif;
+    height: 100%;
+    max-width: 90%;
 }
 
 h1,h2,h3,h4,h5,h6 {
     color: white;
 }
 
+main{
+    margin-top: 1vh;
+}
+
 #welcome {
     font-size: 3.9em;
     color: white;
-    margin-top: 5%;
+    margin-top: 3vh;
     font-weight: 500;
 }
 
@@ -45,8 +52,8 @@ span{
 
 .container {
     width: 100%;
-    margin-left: 7em;
-    height: 100vh;
+    margin-left: 7vh;
+    margin-right: 7vh;
 }
 
 #logo-header {
@@ -91,7 +98,9 @@ li {
 
 #proceed {
     position: absolute;
-    margin-left: 16%;
+    margin-left: 6vh;
+    margin-right: 2vh;
+    float:left;
     border: none;
     background-color: #00FFFF;
     padding: 14px;
