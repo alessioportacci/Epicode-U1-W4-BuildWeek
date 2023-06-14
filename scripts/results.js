@@ -1,6 +1,4 @@
-//const answersRecap = sessionStorage.getItem('answersRecap');
-const answersRecap = [2, 4]
-console.log(answersRecap)
+const answersRecap = sessionStorage.getItem('answersRecap') === null? [2, 4] : sessionStorage.getItem('answersRecap').split(",");  
 
 const totalAnswer = answersRecap[0] + answersRecap [1]
 const correctPercentage = ((answersRecap[0]*100) / totalAnswer).toFixed(1)

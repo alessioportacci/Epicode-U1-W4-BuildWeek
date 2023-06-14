@@ -99,16 +99,19 @@ const questionIndex = []
 const questionAnswers = []
 let index
 
+
+
 const pushAnswers = function (question) {
+  const multiplebox2 = document.getElementById("ans2")
+  const multiplebox3 = document.getElementById("ans3")
+
   //Se è a risposta multipla
   if (question.type === "multiple") {
     const trueIndex = Math.floor(Math.random() * 4 + 1)
     let i = 0
     let truePassed = 0
-    let multiplebox3 = document.getElementById("ans2")
+    multiplebox2.classList.remove("none")
     multiplebox3.classList.remove("none")
-    let multiplebox4 = document.getElementById("ans3")
-    multiplebox4.classList.remove("none")
     while (i < 4) {
       const answerBox = document.getElementById("ans" + i)
       if (i === trueIndex) {
@@ -128,11 +131,8 @@ const pushAnswers = function (question) {
 
     let trueBox = document.getElementById("ans0")
     let falseBox = document.getElementById("ans1")
-    let booleanBox2 = document.getElementById('ans2')
-    booleanBox2.classList.add('none')
-    let booleanBox3 = document.getElementById('ans3')
-    booleanBox3.classList.add('none')
-
+    multiplebox2.classList.add('none')
+    multiplebox3.classList.add('none')
 
     if (trueIndex == 2) {
       trueBox = document.getElementById("ans1")
@@ -155,26 +155,29 @@ const pushQuestion = function () {
   //Se il numero è già uscito, vai di ricorsività
   else if (questionIndex.includes(index)) pushQuestion()
   //Se possiamo prenderci un'altra domanda
-  else {
+  else 
+  {
     //Pusho l'index e carico la domanda
     questionIndex.push(index)
     const question = questions[index]
     document.getElementById("questions").innerHTML = question.question
     //Pusho le domande
     pushAnswers(question)
-    intervallo(1000)
+    intervallo(40)
   }
 }
 
 const timerHTML = document.getElementById("timer-seconds")
 function intervallo(timer) {
   //SetInterval ripete delle istruzione ogni tot secondi va dichiarato come variabile per fare clearInterval
-  const interval = setInterval(function () {
+  const interval = setInterval(function () 
+  {
     //Diminuisco il timer ogni secondo
     timerHTML.innerHTML = timer
     timer -= 1
     //Se il timer finisce, pulisco l'intervallo
-    if (timer < 0) {
+    if (timer < 0) 
+    {
       clearInterval(interval)
       timerHTML.innerHTML = "TEMPO SCADUTO"
       pushQuestion()
