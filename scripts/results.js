@@ -36,12 +36,8 @@ else
     chartBottomText = 'Bravoohh Bravoohh Bravoohh proprio per niente!'
 }
 
-const fistText = "Punteggio"
-
-
       //Scritta di sopra
-      const doughnutLabelTop = 
-      {
+      const doughnutLabelTop = {
         id: "doughnutLabel",
         beforeDatasetsDraw(chart, args, pluginOptions) {
           const { ctx, data } = chart

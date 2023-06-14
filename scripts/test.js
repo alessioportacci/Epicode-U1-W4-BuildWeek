@@ -93,12 +93,13 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ]
-
-let answersRecap = [0, 0]
+//Variabili utilizzate nella pagina
 const questionIndex = []
 const questionAnswers = []
+const ctx = document.getElementById("myChart")
+const timerHTML = document.getElementById("timer-seconds")
+let answersRecap = [0, 0]
 let index
-
 
 
 const pushAnswers = function (question) {
@@ -157,32 +158,16 @@ const pushQuestion = function () {
   //Se possiamo prenderci un'altra domanda
   else 
   {
+    //Aggiorno il timer
+    timer = timerDefault
+    intervallo(timerDefault)
     //Pusho l'index e carico la domanda
     questionIndex.push(index)
     const question = questions[index]
     document.getElementById("questions").innerHTML = question.question
     //Pusho le domande
     pushAnswers(question)
-    intervallo(40)
   }
-}
-
-const timerHTML = document.getElementById("timer-seconds")
-function intervallo(timer) {
-  //SetInterval ripete delle istruzione ogni tot secondi va dichiarato come variabile per fare clearInterval
-  const interval = setInterval(function () 
-  {
-    //Diminuisco il timer ogni secondo
-    timerHTML.innerHTML = timer
-    timer -= 1
-    //Se il timer finisce, pulisco l'intervallo
-    if (timer < 0) 
-    {
-      clearInterval(interval)
-      timerHTML.innerHTML = "TEMPO SCADUTO"
-      pushQuestion()
-    }
-  }, 1000)
 }
 
 //Mi prendo tutti i box delle risposte
@@ -190,6 +175,9 @@ const answerBoxes = document.querySelectorAll(".answer")
 //Ad ogni box aggiungo un evento di click
 answerBoxes.forEach(function (box) {
   box.addEventListener("click", function () {
+    //Resetto l'intervallo alla risposta
+    clearInterval(interval)
+
     //Mi prendo il valore della risposta
     questionAnswers.push(box.getAttribute("value"))
     //Aggiorno il box
@@ -209,6 +197,7 @@ answerBoxes.forEach(function (box) {
     pushQuestion()
   })
 })
+
 document.getElementById("question-number").innerHTML =
   1 + "/" + questions.length
 pushQuestion()

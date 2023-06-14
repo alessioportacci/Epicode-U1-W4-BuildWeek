@@ -12,12 +12,8 @@
     <div class="container">
       <header id="logo">
         <img class="logo" src="assets/images/epicode_logo.png" alt="Logo" />
-        <div id="container-timer">
-          <div id="timer">
-            <p class="text-timer">SECONDS</p>
-            <h4 id="timer-seconds"></h4>
-            <p class="text-timer">REMENING</p>
-          </div>
+        <div style="width: 10em">
+          <canvas id="myChart"></canvas>
         </div>
       </header>
       <main>
@@ -39,40 +35,8 @@
       </footer>
     </div>
 
-    <div style="width: 20em">
-      <canvas id="myChart"></canvas>
-    </div>
-
-    <script src="scripts/test.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- <script>
-      const ctx = document.getElementById("myChart");
-
-      new Chart(ctx, {
-        type: "doughnut",
-        options: {
-          cutout: "90%",
-          responsive: true,
-        },
-        style: {
-          weight: 14000,
-        },
-        data: {
-          labels: ["Risposte corrette", "Risposte Errate"],
-          datasets: [
-            {
-              label: "Risultati finali",
-              data: [answersRecap[0], answersRecap[1]],
-              backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
-              borderWidth: 1,
-              hoverOffset: 4,
-            },
-          ],
-        },
-      });
-    </script>
-
-    <script src="scripts/test.js"></script> -->
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/test.js"></script>
   </body>
 </html>
