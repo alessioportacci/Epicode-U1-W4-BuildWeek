@@ -1,3 +1,4 @@
+// Carichiamo l'array contenente le domande
 const questions = [
   {
     category: "Science: Computers",
@@ -93,25 +94,36 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ]
-
+// Creiamo un'array di recap dove la prima cifra indicherà le risposte corrette e la seconda cifra
+// indicherà le risposte sbagliate
 let answersRecap = [0, 0]
+// Creiamo un'array vuoto che conterrà l'indice delle domande
 const questionIndex = []
+// Creiamo un'array vuoto che conterrà l'indice delle risposte
 const questionAnswers = []
+// Creiamo una variabile indice
 let index
 
+
+// Creiamo una funzione che carichi le risposte per ogni domanda fornita nell'array
 const pushAnswers = function (question) {
   //Se è a risposta multipla
   if (question.type === "multiple") {
+    // Generiamo un index random per posizionare randomicamente la risposta giusta
     const trueIndex = Math.floor(Math.random() * 4 + 1)
     let i = 0
     let truePassed = 0
+    // Generiamo un ciclo while
     while (i < 4) {
       const answerBox = document.getElementById("ans" + i)
+      // Quando i coinciderà con la posizione della risposta giusta attribuirà il valore true al box contenente la risposta
       if (i === trueIndex) {
         answerBox.innerHTML = question.correct_answer
         answerBox.setAttribute("value", "true")
+        // la variabile truePassed diventerà 1 una volta posizionata la risposta giusta
         truePassed = 1
       } else {
+        // Nel caso i non coincidesse con trueIndex, attribuiremo un valore false ai box contenenti le risposte sbagliate
         answerBox.setAttribute("value", "false")
         answerBox.innerHTML = question.incorrect_answers[i - truePassed]
       }
@@ -120,12 +132,14 @@ const pushAnswers = function (question) {
   }
   //Se è a risposta booleana
   else {
+    // Generiamo randomicamente la posizione in cui inserire la risposta corretta
     const trueIndex = Math.floor(Math.random() * 2 + 1)
 
     let trueBox = document.getElementById("ans0")
     let falseBox = document.getElementById("ans1")
 
     if (trueIndex == 2) {
+      // Se l'indice della risposta corretta è pari a 2, la risposta errata sarà necessariamente nell'altro box
       trueBox = document.getElementById("ans1")
       falseBox = document.getElementById("ans0")
     }
@@ -135,6 +149,8 @@ const pushAnswers = function (question) {
   }
 }
 
+
+// Creiamo una funzione che peschi una domanda randomica dall'array fornito
 const pushQuestion = function () {
   //Prendo un index randomico
   index = Math.floor(Math.random() * 10)
