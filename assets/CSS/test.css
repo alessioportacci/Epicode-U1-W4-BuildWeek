@@ -28,6 +28,12 @@ body {
     margin-left: 70px;;
 }
 
+#myChart {
+    position: absolute;
+    top: 3%;
+    right: 10%;
+}
+
 #container-timer {
     width: 120px;
     height: 120px;
@@ -95,7 +101,8 @@ body {
     line-height: 65px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: rgb(50, 53, 74);
+    background-color: rgb(50, 53, 74,0.6);
+    
     
    
 }
@@ -118,7 +125,7 @@ body {
     line-height: 65px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: rgb(50, 53, 74);
+    background-color: rgb(50, 53, 74,0.6);
     
 }
 
@@ -140,7 +147,7 @@ body {
     line-height: 65px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: rgb(50, 53, 74);
+    background-color: rgb(50, 53, 74,0.6);
     
 }
 
@@ -162,7 +169,7 @@ body {
     line-height: 65px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: rgb(50, 53, 74);
+    background-color: rgb(50, 53, 74,0.6);
     
 }
 
