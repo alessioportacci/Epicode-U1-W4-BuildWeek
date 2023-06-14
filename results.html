@@ -18,35 +18,28 @@
           <h1 class="text-results-h1">Results</h1>
           <h5 class="text-results-h5">The summary of your answers:</h5>
         </section>
-        <section>
+        <section id="section-percentage">
           <div id="correct">
-            <h1>Correct <span id="correct-percentage"></span></h1>
+            <h1>Correct <br /><span id="correct-percentage"></span></h1>
             <h5 class="question-correct">
               <span id="correct-number"></span>questions
             </h5>
           </div>
-          <div style="width: 20em; margin: auto; color: white">
+          <div id="chart">
             <canvas id="myChart"> </canvas>
-            <div>
-              <h6 id="final-results"></h6>
-              <h6 id="final-results-2"></h6>
-              <p id="results-message"></p>
-            </div>
+            <form id="rate-us">
+              <button id="button-rate-us" type="submit">RATE US</button>
+            </form>
           </div>
           <div id="wrong">
-            <h1>Wrong <span id="wrong-percentage"></span></h1>
+            <h1>Wrong<br /><span id="wrong-percentage"></span></h1>
             <h5 class="question-wrong">
               <span id="wrong-number"></span>questions
             </h5>
           </div>
-          <form id="rate-us" action="">
-            <button id="button-rate-us" type="submit">RATE US</button>
-          </form>
         </section>
       </main>
     </div>
-
-    <div style="width: 20em"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts/results.js"></script>
