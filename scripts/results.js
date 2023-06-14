@@ -1,5 +1,5 @@
 //const answersRecap = sessionStorage.getItem('answersRecap');
-const answersRecap = [2,4]
+const answersRecap = [2, 4]
 console.log(answersRecap)
 
 const totalAnswer = answersRecap[0] + answersRecap [1]
