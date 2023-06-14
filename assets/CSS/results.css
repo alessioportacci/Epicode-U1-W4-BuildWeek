@@ -1,120 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;600&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;600&display=swap%27");
 body {
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    }
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .logo {
-    width: 150px;
-    margin-top: 4%;
-    margin-left: 150px;
+  width: 10em;
+  margin-top: 4%;
+  margin-left: 12em;
 }
 
 p {
-    font-family: 'Outfit', sans-serif;
-    color: white;
- }
+  font-family: "Outfit", sans-serif;
+  color: white;
+}
 
- h1 {
-    font-size: 2.6em;
-    color: white;
-    font-family: 'Outfit', sans-serif;
- }
+h1 {
+  font-size: 2.6em;
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
 
- h5 {
-    font-size: 1.3em;
-    font-family: 'Outfit', sans-serif;
- }
+h5 {
+  font-size: 1em;
+  font-family: "Outfit", sans-serif;
+}
 
- .text-results-h1 {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    margin-top: 30px;
- }
- .text-results-h5 {
-    text-align: center;
-    color: white;
-    padding: 0.5em;
- }
+.text-results-h1 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.text-results-h5 {
+  text-align: center;
+  color: white;
+  padding: 0.5em;
+}
 
- .container-results {
- width: 100%;
- height: 100vh;
+.container-results {
+  width: 100%;
+  height: 100vh;
+}
 
+#graphic {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 40px solid #00ffff;
+  translate: 570px;
+  margin-top: 2%;
+}
 
- }
+#button-rate-us {
+  margin-left: 20.6%;
+  margin-top: 6vh;
+  border: 2px solid white;
+  color: white;
+  background: none;
+  padding: 12px;
+  width: 190px;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: -4px -6px 50px 6px rgba(0, 255, 255, 0.21);
+}
 
- #chart{
-   width: 20em; 
-   margin: auto; 
-   margin-top: 5vh;
-   color: white
- }
+#section-percentage {
+  margin: 2em 0 2em 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
 
- #correct {
-   width: 200px;
-   height: 200px;
-   display: inline-block;
-  position: fixed;
-  
-   margin-left: px;
-   color: white;
-   font-weight: bold;
-   flex-direction: inherit;
+#chart {
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+}
+
+#correct {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-left: px;
+  color: white;
+  font-weight: bold;
+  flex-direction: inherit;
 }
 
 #wrong {
- margin-left: 600px;
-   position: absolute;
-   color: white;
-   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
 }
-
- 
-
- #graphic {
-    width: 250px;
-    height: 250px;
-   border-radius: 100%;
-   border: 40px solid #00FFFF;
-   translate: 570px;
-   margin-top: 2%;
-
- }
-
- .question-wrong {
-margin-top: 35%;
-translate: 35px;
-
- }
-
- .question-correct {
-    margin-top: 35%;
-    translate: 20%;
- }
-
- #button-rate-us {
-   margin-left: 20.6%;
-   margin-top: 6vh;
-   border:2px solid white;
-    color: white;
-    background: none;
-    padding: 12px;
-    width: 190px;
-    font-size: 1.2em;
-    font-weight: bold;
-   box-shadow: -4px -6px 50px 6px rgba(0,255,255,0.21)
- }
-
- #section-percentage {
-   display: flex;
-   justify-content: space-evenly;
-   border: 1px solid wheat;
-   align-items: center;
-   color: white;
-   
-   margin-left: 50%;
-   margin-right: 90%;
- }
