@@ -112,7 +112,8 @@ const pushAnswers = function (question) {
   //Se è a risposta multipla
   if (question.type === "multiple") {
     // Generiamo un index random per posizionare randomicamente la risposta giusta
-    const trueIndex = Math.floor(Math.random() * 4 + 1)
+    const trueIndex = Math.floor(Math.random() * 4)
+    console.log(trueIndex)
     let i = 0
     // Generiamo una variabile per identificare se la domanda giusta è stata inserita (diventerà successivamente 1)
     // oppure se non è ancora stata inserita (sarà uguale a 0)
@@ -139,22 +140,25 @@ const pushAnswers = function (question) {
   //Se è a risposta booleana
   else {
     // Generiamo randomicamente la posizione in cui inserire la risposta corretta
-    const trueIndex = Math.floor(Math.random() * 2 + 1)
-
+    const trueIndex = Math.floor(Math.random() * 2)
+    console.log(trueIndex)
     let trueBox = document.getElementById("ans0")
     let falseBox = document.getElementById("ans1")
     // Aggiungiamo a due box di risposte la classe ".none" per farle sparire quando il test sarà di tipo booleano
     multiplebox2.classList.add('none')
     multiplebox3.classList.add('none')
 
-    if (trueIndex == 2) {
+    if (trueIndex == 1) {
       // Se l'indice della risposta corretta è pari a 2, la risposta errata sarà necessariamente nell'altro box
       trueBox = document.getElementById("ans1")
       falseBox = document.getElementById("ans0")
     }
 
     trueBox.innerHTML = question.correct_answer
+    trueBox.setAttribute("value", "true")
     falseBox.innerHTML = question.incorrect_answers[0]
+    trueBox.setAttribute("value", "false")
+
   }
 }
 
