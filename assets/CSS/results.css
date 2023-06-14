@@ -49,8 +49,22 @@ p {
  #chart{
    width: 20em; 
    margin: auto; 
+   margin-top: 5vh;
    color: white
  }
+
+ #button-rate-us {
+   margin-left: 20.6%;
+   margin-top: 6vh;
+   border:2px solid white;
+   color: white;
+   background: none;
+   padding: 12px;
+   width: 190px;
+   font-size: 1.2em;
+   font-weight: bold;
+  box-shadow: -4px -6px 50px 6px rgba(0,255,255,0.21)
+}
 
 
  #correct {
@@ -100,16 +114,5 @@ translate: 35px;
     translate: 20%;
  }
 
- #button-rate-us {
-    margin-left: 20.6%;
-    margin-top: 6vh;
-    border:2px solid white;
-    color: white;
-    background: none;
-    padding: 12px;
-    width: 190px;
-    font-size: 1.2em;
-    font-weight: bold;
-   box-shadow: -4px -6px 50px 6px rgba(0,255,255,0.21)
- }
+
 
