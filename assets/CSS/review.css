@@ -9,13 +9,17 @@ body {
 }
 
 h1 {
+    font-family: "Outfit", sans-serif;
     font-weight: bold;
     font-size: 2em;
+    
 }
 
 p {
+    font-family: "Outfit", sans-serif;
     margin-top: 20px;
     padding: 10px;
+    
 }
 
 #logo-header {
@@ -25,12 +29,14 @@ p {
 }
 
 .container-review {
+    font-family: "Outfit", sans-serif;
     width: 100%;
     height: auto;
     
 }
 
 .container-section1 {
+    font-family: "Outfit", sans-serif;
     text-align: center;
     color: white;
     padding: 10px;
@@ -39,12 +45,14 @@ p {
 }
 
 .container-section2 {
+    font-family: "Outfit", sans-serif;
     width: 100%;
     text-align: center;
     cursor: pointer;
 }
 
 .container-section3 {
+    font-family: "Outfit", sans-serif;
     width: 100%;
     text-align: center;
     color: white;
