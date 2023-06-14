@@ -3,7 +3,7 @@ body {
     background-image: url(../images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -11,9 +11,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #welcome {
-    font-size: 3.8em;
+    font-size: 3.9em;
     color: white;
     margin-top: 5%;
+    font-weight: 500;
 }
 
 #bold-text-h1 {
@@ -21,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
     color: white;
     display: block;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 span {
@@ -49,7 +50,7 @@ span{
 }
 
 #logo-header {
-    width: 200px;
+    width: 150px;
     margin-top: 2%;
 }
 
@@ -83,22 +84,28 @@ li {
 #form-proceed {
     margin-top: 10%;
     color: white;
+    font-weight: 600;
+    font-size: 0.8em;
+    
 }
 
 #proceed {
     position: absolute;
-    margin-left: 10%;
+    margin-left: 16%;
     border: none;
     background-color: #00FFFF;
-    padding: 15px;
-    width: 140px;
+    padding: 14px;
+    width: 170px;
     cursor: pointer;
     font-size: 1em;
     box-shadow:3px -3px 50px 9px rgba(0,255,255,0.75);
     font-weight: bold;
+   
 }
+
 
 #check {
     background-color: black;
+    
 }
 
