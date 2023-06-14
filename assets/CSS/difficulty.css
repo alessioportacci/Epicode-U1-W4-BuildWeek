@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;600&display=swap');
+
+#logo-header {
+    width: 150px;
+    margin-top: 2%;
+  }
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ h1 {
+    font-size: 2.6em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5em;
+ }
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+#logo {
+    width: 10em;
+    margin-top: 4%;
+    margin-left: 70px;;
+}
+
+
+.container-difficulty {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+
+.difficulty {
+    width: 330px;
+    height: 70px;
+    margin:4em;
+    display: inline-block;
+    border-width: 2px 4px;
+    border-radius: 40px;
+    border-top: 3px solid;
+    border-bottom: 2px solid linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+    linear-gradient(169deg, rgba(202,205,206,0.94) 0%, #e5e5e5 100%, rgba(229,229,229,0.96) 100%);
+    color: white;
+    text-align: center;
+    line-height: 65px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(50, 53, 74,0.6);  
+}
+
+.difficulty:hover {
+    background-color: #D20094;
+    cursor: pointer;
+}

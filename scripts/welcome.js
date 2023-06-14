@@ -6,5 +6,5 @@ button.addEventListener("click", function (e) {
   //Controllo la validità del form prima di procedere
   if (document.forms["form-proceed"].reportValidity())
   //Carichiamo la pagina successiva al click del button 
-    window.location.href = "/test.html"
+    window.location.href = "/difficulty.html"
 })
