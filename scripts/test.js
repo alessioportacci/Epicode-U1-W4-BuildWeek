@@ -105,6 +105,10 @@ const pushAnswers = function (question) {
     const trueIndex = Math.floor(Math.random() * 4 + 1)
     let i = 0
     let truePassed = 0
+    let multiplebox3 = document.getElementById("ans2")
+    multiplebox3.classList.remove("none")
+    let multiplebox4 = document.getElementById("ans3")
+    multiplebox4.classList.remove("none")
     while (i < 4) {
       const answerBox = document.getElementById("ans" + i)
       if (i === trueIndex) {
