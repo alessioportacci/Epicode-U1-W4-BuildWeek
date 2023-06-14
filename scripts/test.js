@@ -107,6 +107,7 @@ let index
 
 // Creiamo una funzione che carichi le risposte per ogni domanda fornita nell'array
 const pushAnswers = function (question) {
+  // Targettiamo gli ID dei box contenenti le risposte che dovranno sparire quando il tipo di domanda sarà booleana
   const multiplebox2 = document.getElementById("ans2")
   const multiplebox3 = document.getElementById("ans3")
 
@@ -115,7 +116,10 @@ const pushAnswers = function (question) {
     // Generiamo un index random per posizionare randomicamente la risposta giusta
     const trueIndex = Math.floor(Math.random() * 4 + 1)
     let i = 0
+    // Generiamo una variabile per identificare se la domanda giusta è stata inserita (diventerà successivamente 1)
+    // oppure se non è ancora stata inserita (sarà uguale a 0)
     let truePassed = 0
+    // Rimuoviamo la classe ".none" quando ci sarà una domanda a risposta multipla
     multiplebox2.classList.remove("none")
     multiplebox3.classList.remove("none")
     while (i < 4) {
@@ -141,6 +145,7 @@ const pushAnswers = function (question) {
 
     let trueBox = document.getElementById("ans0")
     let falseBox = document.getElementById("ans1")
+    // Aggiungiamo a due box di risposte la classe ".none" per farle sparire quando il test sarà di tipo booleano
     multiplebox2.classList.add('none')
     multiplebox3.classList.add('none')
 
@@ -211,12 +216,16 @@ answerBoxes.forEach(function (box) {
     console.log("Answers recap" + answersRecap)
     //Se la risposta è giusta
     if (box.getAttribute("value") == "true") {
+      // Apparirà un alert per avvertirti che la risposta è giusta
       alert("Bravissimo")
+      // L'array answerRecap[] aumenterà il suo primo valore di uno per ogni risposta giusta
       answersRecap[0]++
     }
     //Se la risposta è sbagliata
     else {
-      alert("Poteva andà peggio")
+      // Apparirà un alert se la risposta è sbagliata
+      alert("Hai toppato Chicco!!")
+    // L'array answerRecap[] aumenterà il suo secondo valore di uno per ogni risposta sbagliata
       answersRecap[1]++
     }
     pushQuestion()
