@@ -1,6 +1,8 @@
 // Recuperiamo l'array answerRecap dallo script precedente, compilato ccon la sessione odierna
 // Ne impostiamo uno di default per contuare la progettazione
 const answersRecap = sessionStorage.getItem('answersRecap') === null? [2, 4] : sessionStorage.getItem('answersRecap').split(",");  
+answersRecap[0] = parseInt(answersRecap[0])
+answersRecap[1] = parseInt(answersRecap[1])
 // Formuliamo una variabile che indica il totale delle domande, ottenuto dalla
 // somma delle risposte giuste e quelle sbagliate
 const totalAnswer = answersRecap[0] + answersRecap [1]
