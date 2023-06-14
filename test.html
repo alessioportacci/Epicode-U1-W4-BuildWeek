@@ -36,6 +36,41 @@
         <p id="question">QUESTION <span id="question-number"></span></p>
       </footer>
     </div>
+
+    <div style="width: 20em">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="scripts/results.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart")
+
+      new Chart(ctx, {
+        type: "doughnut",
+        options: {
+          cutout: "90%",
+          responsive: true,
+        },
+        style: {
+          weight: 14000,
+        },
+        data: {
+          labels: ["Risposte corrette", "Risposte Errate"],
+          datasets: [
+            {
+              label: "Risultati finali",
+              data: [answersRecap[0], answersRecap[1]],
+              backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+              borderWidth: 1,
+              hoverOffset: 4,
+            },
+          ],
+        },
+      })
+    </script>
+
     <script src="scripts/test.js"></script>
   </body>
 </html>
