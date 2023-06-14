@@ -19,7 +19,7 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
+    height: 100%;
 }
 
 .logo {
@@ -58,14 +58,9 @@ body {
     color: white;
 }
 
-#questions {
-    text-align: center;
-    margin-top: 10%;
-}
-
 .container-answer {
     width: 840px;
-    height: 500px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -81,7 +76,7 @@ body {
     width: 330px;
     height: 70px;
     display: inline-block;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 10%;
     border-width: 2px 4px;
     border-radius: 40px;
@@ -170,12 +165,20 @@ body {
     display: none;
 }
 
+.timer {
+    margin-left: 80em;
+}
 
 #question {
     text-align: center;
     font-weight: bold;
     padding: 10px;
     font-size: 1.3em;
+}
+
+#questions {
+    text-align: center;
+    margin-top: 2em;
 }
 
 #question-number {
