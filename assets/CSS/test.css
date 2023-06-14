@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;600&display=swap');
 body {
     background-image: url(../images/bg.jpg);
     background-size: cover;
@@ -13,6 +13,7 @@ body {
  h1 {
     font-size: 2.6em;
     color: white;
+    font-weight: bold;
  }
 .container {
     width: 100%;
@@ -65,10 +66,16 @@ body {
 .container-answer {
     width: 840px;
     height: 500px;
-    
     margin-left: auto;
     margin-right: auto;
 }
+
+.answer:hover {
+    background-color: #D20094;
+    cursor: pointer;
+}
+
+
 
 .answer1 {
     width: 330px;
@@ -78,13 +85,19 @@ body {
     margin-left: 10%;
     border-width: 2px 4px;
     border-radius: 40px;
-    border-top: 3px solid white;
+    border-top: 3px solid;
     border-radius: 40px 40px 40px 40px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+    linear-gradient(169deg, rgba(202,205,206,0.94) 0%, #e5e5e5 100%, rgba(229,229,229,0.96) 100%);
     border-radius: 40px 40px 40px 40px;
     color: white;
     text-align: center;
     line-height: 65px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(50, 53, 74);
+    
+   
 }
 
 .answer2 {
@@ -97,11 +110,16 @@ body {
     border-radius: 40px;
     border-top: 3px solid white;
     border-radius: 40px 40px 40px 40px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+    linear-gradient(169deg, rgba(202,205,206,0.94) 0%, #e5e5e5 100%, rgba(229,229,229,0.96) 100%);
     border-radius: 40px 40px 40px 40px;
     color: white;
     text-align: center;
     line-height: 65px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(50, 53, 74);
+    
 }
 
 .answer3 {
@@ -114,11 +132,16 @@ body {
     border-radius: 40px;
     border-top: 3px solid white;
     border-radius: 40px 40px 40px 40px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+    linear-gradient(169deg, rgba(202,205,206,0.94) 0%, #e5e5e5 100%, rgba(229,229,229,0.96) 100%);
     border-radius: 40px 40px 40px 40px;
     color: white;
     text-align: center;
     line-height: 65px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(50, 53, 74);
+    
 }
 
 .answer4 {
@@ -131,11 +154,16 @@ body {
     border-radius: 40px;
     border-top: 3px solid white;
     border-radius: 40px 40px 40px 40px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+    linear-gradient(169deg, rgba(202,205,206,0.94) 0%, #e5e5e5 100%, rgba(229,229,229,0.96) 100%);
     border-radius: 40px 40px 40px 40px;
     color: white;
     text-align: center;
     line-height: 65px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgb(50, 53, 74);
+    
 }
 
 .none {

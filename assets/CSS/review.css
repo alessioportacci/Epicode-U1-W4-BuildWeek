@@ -36,12 +36,12 @@ p {
     padding: 10px;
     margin-top: 5%;
     font-size: 1.6em;
-
 }
 
 .container-section2 {
     width: 100%;
     text-align: center;
+    cursor: pointer;
 }
 
 .container-section3 {
