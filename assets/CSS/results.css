@@ -96,7 +96,7 @@ translate: 35px;
  }
 
  #button-rate-us {
-    margin-left: 45%;
+    margin-left: auto;
     margin-top: 3%;
     border:2px solid white;
     color: white;
