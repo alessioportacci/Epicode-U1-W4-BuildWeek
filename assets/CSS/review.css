@@ -80,6 +80,10 @@ p {
     color: white;
 }
 
+#comment:focus{
+    border:none;
+}
+
 hr {
     margin-right: 25%;
     margin-left: 25%;

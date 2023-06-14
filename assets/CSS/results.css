@@ -65,6 +65,7 @@ h5 {
   font-size: 1.2em;
   font-weight: bold;
   box-shadow: -4px -6px 50px 6px rgba(0, 255, 255, 0.21);
+  cursor: pointer;
 }
 
 #section-percentage {
