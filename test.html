@@ -25,17 +25,54 @@
           <h1 id="questions"></h1>
         </section>
         <section id="box-answer">
-          <div id="ans0" class="answer answer1"></div>
-          <div id="ans1" class="answer answer1"></div>
-          <br />
-          <div id="ans2" class="answer answer2"></div>
-          <div id="ans3" class="answer answer2"></div>
+          <div class="container-answer">
+            <div id="ans0" class="answer answer1"></div>
+            <div id="ans1" class="answer answer2"></div>
+            <br />
+            <div id="ans2" class="answer answer3"></div>
+            <div id="ans3" class="answer answer4"></div>
+          </div>
         </section>
       </main>
       <footer>
         <p id="question">QUESTION <span id="question-number"></span></p>
       </footer>
     </div>
+
+    <div style="width: 20em">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="scripts/results.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart")
+
+      new Chart(ctx, {
+        type: "doughnut",
+        options: {
+          cutout: "90%",
+          responsive: true,
+        },
+        style: {
+          weight: 14000,
+        },
+        data: {
+          labels: ["Risposte corrette", "Risposte Errate"],
+          datasets: [
+            {
+              label: "Risultati finali",
+              data: [answersRecap[0], answersRecap[1]],
+              backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+              borderWidth: 1,
+              hoverOffset: 4,
+            },
+          ],
+        },
+      })
+    </script>
+
     <script src="scripts/test.js"></script>
   </body>
 </html>

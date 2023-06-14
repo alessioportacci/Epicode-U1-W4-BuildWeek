@@ -137,6 +137,11 @@ const pushAnswers = function (question) {
 
     let trueBox = document.getElementById("ans0")
     let falseBox = document.getElementById("ans1")
+    let booleanBox2 = document.getElementById('ans2')
+    booleanBox2.classList.add('none')
+    let booleanBox3 = document.getElementById('ans3')
+    booleanBox3.classList.add('none')
+
 
     if (trueIndex == 2) {
       // Se l'indice della risposta corretta è pari a 2, la risposta errata sarà necessariamente nell'altro box
@@ -169,7 +174,7 @@ const pushQuestion = function () {
     document.getElementById("questions").innerHTML = question.question
     //Pusho le domande
     pushAnswers(question)
-    intervallo(40)
+    intervallo(1000)
   }
 }
 
