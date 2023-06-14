@@ -53,47 +53,26 @@ p {
    color: white
  }
 
- #button-rate-us {
-   margin-left: 20.6%;
-   margin-top: 6vh;
-   border:2px solid white;
-   color: white;
-   background: none;
-   padding: 12px;
-   width: 190px;
-   font-size: 1.2em;
-   font-weight: bold;
-  box-shadow: -4px -6px 50px 6px rgba(0,255,255,0.21)
-}
-
-
  #correct {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-   position: fixed;
-   bottom: 0;
-   left: 0;
-   top: 40%;
-    margin-left: 150px;
-    color: white;
-    font-weight: bold;
- }
-
- #wrong {
    width: 200px;
    height: 200px;
-   position: absolute;
-   bottom: 0;
-  right: 0;
-  top: 40%;
-  margin-right: 30px;
+   display: inline-block;
+  position: fixed;
+  
+   margin-left: px;
    color: white;
    font-weight: bold;
+   flex-direction: inherit;
+}
 
+#wrong {
+ margin-left: 600px;
+   position: absolute;
+   color: white;
+   font-weight: bold;
+}
 
-
- }
+ 
 
  #graphic {
     width: 250px;
@@ -117,9 +96,9 @@ translate: 35px;
  }
 
  #button-rate-us {
-    margin-left: auto;
-    margin-top: 3%;
-    border:2px solid white;
+   margin-left: 20.6%;
+   margin-top: 6vh;
+   border:2px solid white;
     color: white;
     background: none;
     padding: 12px;
@@ -129,3 +108,13 @@ translate: 35px;
    box-shadow: -4px -6px 50px 6px rgba(0,255,255,0.21)
  }
 
+ #section-percentage {
+   display: flex;
+   justify-content: space-evenly;
+   border: 1px solid wheat;
+   align-items: center;
+   color: white;
+   
+   margin-left: 50%;
+   margin-right: 90%;
+ }
