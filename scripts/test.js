@@ -186,7 +186,6 @@ const pushQuestion = function () {
     document.getElementById("questions").innerHTML = question.question
     //Pusho le domande
     pushAnswers(question)
-    intervallo(1000)
   }
 }
 
