@@ -65,6 +65,7 @@ const timerText = {
         timer = timerDefault
         clearInterval(interval)
         answersRecap[1]++
+        questionAnswers.push("false")
         document.getElementById("question-number").innerHTML =
         questionAnswers.length + 1 + "/" + questions.length
         pushQuestion()
