@@ -1,5 +1,4 @@
 // Carichiamo l'array contenente le domande
-
 const questions =  JSON.parse(sessionStorage.getItem('questions'))
 console.log(questions)
 //Variabili utilizzate nella pagina

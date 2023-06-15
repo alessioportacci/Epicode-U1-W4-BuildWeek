@@ -7,7 +7,7 @@ let chart = new Chart()
 //Plug in per il testo
 const timerText = {
     id: "doughnutLabel",
-    beforeDatasetsDraw(chart, args, pluginOptions) {
+    beforeDatasetsDraw(chart) {
       const { ctx, data } = chart
       ctx.save()
       const xCoor = chart.getDatasetMeta(0).data[0].x
@@ -65,6 +65,8 @@ const timerText = {
         timer = timerDefault
         clearInterval(interval)
         answersRecap[1]++
+        document.getElementById("question-number").innerHTML =
+        questionAnswers.length + 1 + "/" + questions.length
         pushQuestion()
       }  
   
