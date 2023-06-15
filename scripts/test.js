@@ -107,7 +107,7 @@ answerBoxes.forEach(function (box) {
 
     //Mi prendo il valore della risposta
     questionAnswers.push(box.getAttribute("value"))
-    //Aggiorno il box
+    //Aggiorno il box aumentando il valore delle domande di +1
     document.getElementById("question-number").innerHTML =
       questionAnswers.length + 1 + "/" + questions.length
     console.log("Answers recap" + answersRecap)
